@@ -27,7 +27,7 @@ There are a couple of widely used packages for making concurrent web requests wi
 
 I tried both packages, but for my use case, found them to be too limiting.  Instead I started with [an example](https://docs.python.org/3/library/concurrent.futures.html#threadpoolexecutor-example) from the official python docs and tailored it to my needs:
 
-```python
+{% highlight python %}
 from bs4 import BeautifulSoup
 import requests
 import sys
@@ -76,7 +76,7 @@ with concurrent.futures.ThreadPoolExecutor(max_workers=7) as executor:
                 output.append((title, content))
         runtime = time.time() - start
         sys.stdout.write("took {} seconds or {} links per second".format(runtime, 100/runtime))
-```
+{% endhighlight %}
 
 This allows you to run the process on multiple threads at once, configurable by the `max_workers` argument passed into the  `ThreadPoolExecutor` object.
 
