@@ -7,7 +7,7 @@ Recently I found myself having to gather some metadata about a large number of U
 
 This is typically very easy to do in Python using Requests and Beautiful Soup:
 
-```python
+{% highlight python %}
 import requests
 from bs4 import BeautifulSoup
 
@@ -17,7 +17,7 @@ for url in urls:
     soup = BeautifulSoup(r.content)
     title = soup.title
 	titles.append((url, title))
-```
+{% endhighlight %}
 
 That does the job for most small tasks, but what if you have to grab info on hundreds of thousands, or even millions of URLs?  By default, each link was being crawled one at a time, with the next one not starting until the previous one finished.  Why not crawl multiple links at once?  That's where concurrency comes in.
 
