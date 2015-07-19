@@ -7,7 +7,7 @@ Recently I found myself having to gather some metadata about a large number of U
 
 This is typically very easy to do in Python using Requests and Beautiful Soup:
 
-```
+```python
 import requests
 from bs4 import BeautifulSoup
 
@@ -27,7 +27,7 @@ There are a couple of widely used packages for making concurrent web requests wi
 
 I tried both packages, but for my use case, found them to be too limiting.  Instead I started with [an example](https://docs.python.org/3/library/concurrent.futures.html#threadpoolexecutor-example) from the official python docs and tailored it to my needs:
 
-```
+```python
 from bs4 import BeautifulSoup
 import requests
 import sys
