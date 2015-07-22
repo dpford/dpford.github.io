@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Making Concurrent Web Requests with Python
+comments: true
 ---
 
 Recently I found myself having to gather some metadata about a large number of URLs (title tag, text from page, etc.)
