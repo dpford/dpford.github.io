@@ -17,7 +17,7 @@ for url in urls:
     r = requests.get(url)
     soup = BeautifulSoup(r.content)
     title = soup.title
-	titles.append((url, title))
+    titles.append((url, title))
 {% endhighlight %}
 
 That does the job for most small tasks, but what if you have to grab info on hundreds of thousands, or even millions of URLs?  By default, each link was being crawled one at a time, with the next one not starting until the previous one finished.  Why not crawl multiple links at once?  That's where concurrency comes in.
@@ -37,7 +37,7 @@ import time
 
 # Hopefully you'll be checking more than three URLs
 URLS = ['https://www.google.com/',
-		'https://github.com/',
+        'https://github.com/',
         'https://www.facebook.com/']
 
 #Outputting to a list for simplicity, but you'd probably want to output into some sort of datastore
